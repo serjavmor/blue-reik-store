@@ -1,0 +1,481 @@
+/* Globals & CSS Design System - Dropshipping Premium */
+
+:root {
+  /* HSL Color Palette - Warm Minimalist (Fashion Premium) */
+  --bg-primary: hsl(30, 20%, 98%);
+  --bg-secondary: hsl(30, 15%, 94%);
+  --bg-card: hsl(0, 0%, 100%);
+  --text-primary: hsl(20, 15%, 15%);
+  --text-secondary: hsl(20, 10%, 40%);
+  --text-muted: hsl(20, 10%, 60%);
+  
+  --brand-primary: hsl(343, 40%, 35%); /* Burdeos elegante */
+  --brand-hover: hsl(343, 45%, 28%);
+  --brand-light: hsl(343, 30%, 92%);
+  
+  --accent-urgency: hsl(5, 75%, 45%); /* Alertas de stock bajo / urgencia */
+  --accent-urgency-bg: hsl(5, 80%, 96%);
+  
+  --success: hsl(140, 40%, 35%);
+  --success-bg: hsl(140, 45%, 96%);
+  
+  --border-color: hsl(20, 10%, 88%);
+  --border-focus: hsl(343, 40%, 35%);
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 20px rgba(25, 20, 20, 0.08);
+  --shadow-lg: 0 10px 40px rgba(25, 20, 20, 0.12);
+  
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+  
+  --font-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Soporte para Modo Oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: hsl(20, 8%, 10%);
+    --bg-secondary: hsl(20, 8%, 14%);
+    --bg-card: hsl(20, 8%, 12%);
+    --text-primary: hsl(30, 10%, 90%);
+    --text-secondary: hsl(30, 8%, 70%);
+    --text-muted: hsl(30, 5%, 50%);
+    
+    --brand-primary: hsl(343, 45%, 55%);
+    --brand-hover: hsl(343, 50%, 65%);
+    --brand-light: hsl(343, 30%, 20%);
+    
+    --accent-urgency: hsl(5, 80%, 60%);
+    --accent-urgency-bg: hsl(5, 40%, 18%);
+    
+    --success: hsl(140, 50%, 55%);
+    --success-bg: hsl(140, 30%, 18%);
+    
+    --border-color: hsl(20, 8%, 20%);
+    --border-focus: hsl(343, 45%, 55%);
+  }
+}
+
+/* Reset y Estilos de Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilos de Contenedor */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Tipografía */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Botones Premium */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--brand-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(118, 32, 57, 0.2);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+}
+
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* Inputs de Formulario Premium */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  accent-color: var(--brand-primary);
+}
+
+.form-control:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px var(--brand-light);
+}
+
+/* Header / Barra de Navegación */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(253, 251, 249, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: rgba(25, 23, 23, 0.8);
+  }
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar-link {
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: var(--brand-primary);
+}
+
+/* --- ANIMACIONES DE MODALES/POPUP USANDO @starting-style --- */
+
+/* Base para Popovers y Modales */
+.overlay-top,
+.cart-drawer {
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), display 0.3s allow-discrete, overlay 0.3s allow-discrete;
+}
+
+/* Notificación Flotante de Prueba Social (Popup-CRO) */
+.social-proof-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  max-width: 350px;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), display 0.4s allow-discrete, overlay 0.4s allow-discrete;
+}
+
+.social-proof-toast.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  
+  @starting-style {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+}
+
+.social-proof-img {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.social-proof-text {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.social-proof-text strong {
+  color: var(--text-primary);
+}
+
+/* Cajón del Carrito Lateral (Drawer) */
+.cart-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease, display 0.3s allow-discrete, overlay 0.3s allow-discrete;
+}
+
+.cart-backdrop.show {
+  opacity: 1;
+  
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-lg);
+  z-index: 1001;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  opacity: 0.8;
+}
+
+.cart-drawer.show {
+  transform: translateX(0);
+  opacity: 1;
+  
+  @starting-style {
+    transform: translateX(100%);
+    opacity: 0.8;
+  }
+}
+
+/* Respetar la preferencia de reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.05s !important;
+    animation-duration: 0.05s !important;
+  }
+  
+  .social-proof-toast.show,
+  .cart-drawer.show {
+    transform: none !important;
+  }
+}
+
+/* Banner de Urgencia Superior */
+.urgency-banner {
+  background-color: var(--accent-urgency);
+  color: white;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.02em;
+  z-index: 101;
+  position: relative;
+}
+
+.urgency-timer {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+/* Tarjeta de Producto */
+.product-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-focus);
+}
+
+.product-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--accent-urgency);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 5;
+}
+
+.product-img-wrapper {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.7em;
+  line-height: 1.35;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: #fbbf24; /* Amarillo estrella */
+  margin-bottom: 12px;
+}
+
+.product-rating-count {
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.product-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.product-price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+.product-original-price {
+  font-size: 0.95rem;
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
