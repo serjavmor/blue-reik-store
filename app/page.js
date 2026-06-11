@@ -73,7 +73,7 @@ function StoreContent({ products, onAddToCart }) {
             {/* Pantalones */}
             <div className="category-card">
               <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
-                <img src="/images/aerofit_sportset.png" alt="Pantalones" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/pants_category.png" alt="Pantalones" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="category-name">Pantalones</span>
             </div>
@@ -89,7 +89,7 @@ function StoreContent({ products, onAddToCart }) {
             {/* Faldas */}
             <div className="category-card">
               <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
-                <img src="/images/softcloud_sweater.png" alt="Faldas" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/skirt_category.png" alt="Faldas" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="category-name">Faldas</span>
             </div>
@@ -97,7 +97,7 @@ function StoreContent({ products, onAddToCart }) {
             {/* Calzado */}
             <div className="category-card">
               <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
-                <img src="/images/aerofit_sportset.png" alt="Calzado" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/shoes_category.png" alt="Calzado" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="category-name">Calzado</span>
             </div>
@@ -105,14 +105,15 @@ function StoreContent({ products, onAddToCart }) {
             {/* Ropa Interior */}
             <div className="category-card">
               <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
-                <img src="/images/aerofit_sportset.png" alt="Ropa Interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/lingerie_category.png" alt="Ropa Interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="category-name">Ropa Interior</span>
             </div>
             
             {/* Categoría Ropa Hot con efecto Blur Privado */}
-            <div className="category-card category-hot">
-              <div className="hot-blur-overlay">
+            <div className="category-card category-hot" style={{ position: 'relative' }}>
+              <img src="/images/hot_category.png" alt="Ropa Hot" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div className="hot-blur-overlay" style={{ zIndex: 2 }}>
                 <span style={{ fontSize: '2.25rem', filter: 'drop-shadow(0 2px 8px rgba(235, 85, 71, 0.5))' }}>🔥</span>
                 <span className="hot-name">Ropa Hot</span>
                 <span style={{ 
