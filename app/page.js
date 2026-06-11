@@ -102,6 +102,14 @@ function StoreContent({ products, onAddToCart }) {
               <span className="category-name">Calzado</span>
             </div>
             
+            {/* Deportiva */}
+            <div className="category-card">
+              <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
+                <img src="/images/aerofit_sportset.png" alt="Deportiva" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <span className="category-name">Deportiva</span>
+            </div>
+            
             {/* Ropa Interior */}
             <div className="category-card">
               <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
