@@ -71,47 +71,64 @@ function StoreContent({ products, onAddToCart }) {
           <h2 className="categories-title">Explorar Categorías</h2>
           <div className="categories-container">
             {/* Pantalones */}
-            <div className="category-card" style={{ position: 'relative' }}>
-              <img src="/images/aerofit_sportset.png" alt="Pantalones" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
-              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Pantalones</span>
+            <div className="category-card">
+              <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
+                <img src="/images/aerofit_sportset.png" alt="Pantalones" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <span className="category-name">Pantalones</span>
             </div>
             
             {/* Vestidos */}
-            <div className="category-card" style={{ position: 'relative' }}>
-              <img src="/images/satin_flow_dress.png" alt="Vestidos" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
-              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Vestidos</span>
+            <div className="category-card">
+              <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
+                <img src="/images/satin_flow_dress.png" alt="Vestidos" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <span className="category-name">Vestidos</span>
             </div>
             
             {/* Faldas */}
-            <div className="category-card" style={{ position: 'relative' }}>
-              <img src="/images/softcloud_sweater.png" alt="Faldas" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
-              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Faldas</span>
+            <div className="category-card">
+              <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
+                <img src="/images/softcloud_sweater.png" alt="Faldas" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <span className="category-name">Faldas</span>
             </div>
             
             {/* Calzado */}
-            <div className="category-card" style={{ position: 'relative' }}>
-              <img src="/images/aerofit_sportset.png" alt="Calzado" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
-              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Calzado</span>
+            <div className="category-card">
+              <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
+                <img src="/images/aerofit_sportset.png" alt="Calzado" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <span className="category-name">Calzado</span>
             </div>
             
             {/* Ropa Interior */}
-            <div className="category-card" style={{ position: 'relative' }}>
-              <img src="/images/aerofit_sportset.png" alt="Ropa Interior" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
-              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Ropa Interior</span>
+            <div className="category-card">
+              <div className="category-icon-wrapper" style={{ overflow: 'hidden', padding: 0 }}>
+                <img src="/images/aerofit_sportset.png" alt="Ropa Interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <span className="category-name">Ropa Interior</span>
             </div>
             
-            {/* Categoría Ropa Hot con efecto Blur */}
-            <div className="category-card category-hot" style={{ position: 'relative' }}>
-              <img src="/images/satin_flow_dress.png" alt="Ropa Hot" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div className="hot-blur-overlay" style={{ zIndex: 2 }}>
-                <span style={{ fontSize: '2rem' }}>🔥</span>
+            {/* Categoría Ropa Hot con efecto Blur Privado */}
+            <div className="category-card category-hot">
+              <div className="hot-blur-overlay">
+                <span style={{ fontSize: '2.25rem', filter: 'drop-shadow(0 2px 8px rgba(235, 85, 71, 0.5))' }}>🔥</span>
                 <span className="hot-name">Ropa Hot</span>
-                <span style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.4)', padding: '2px 6px', borderRadius: '10px', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Privado</span>
+                <span style={{ 
+                  fontSize: '0.65rem', 
+                  color: 'rgba(255,255,255,0.9)', 
+                  backgroundColor: 'rgba(235, 85, 71, 0.25)', 
+                  border: '1px solid rgba(235, 85, 71, 0.5)', 
+                  padding: '2px 8px', 
+                  borderRadius: '10px', 
+                  marginTop: '6px', 
+                  textTransform: 'uppercase', 
+                  letterSpacing: '0.07em',
+                  fontWeight: '700'
+                }}>
+                  Privado
+                </span>
               </div>
             </div>
           </div>
