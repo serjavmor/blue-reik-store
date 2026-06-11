@@ -479,3 +479,128 @@ h1, h2, h3, h4 {
   text-decoration: line-through;
   color: var(--text-muted);
 }
+
+/* Carrusel de Categorías */
+.categories-section {
+  margin-bottom: 48px;
+}
+
+.categories-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.categories-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 4px 20px 4px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.categories-container::-webkit-scrollbar {
+  display: none;
+}
+
+.category-card {
+  flex: 0 0 140px;
+  scroll-snap-align: start;
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-card);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .category-card {
+    flex: 0 0 160px;
+  }
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-md);
+}
+
+.category-icon-wrapper {
+  background-color: var(--bg-secondary);
+  color: var(--brand-primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.category-card:hover .category-icon-wrapper {
+  background-color: var(--brand-light);
+  transform: scale(1.05);
+}
+
+.category-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* Categoría Ropa Hot Privada (Blur) */
+.category-hot {
+  background: linear-gradient(135deg, hsl(355, 60%, 15%), hsl(343, 60%, 25%));
+  border: 1px solid hsl(355, 60%, 35%);
+}
+
+.category-hot:hover {
+  border-color: var(--accent-urgency);
+}
+
+.hot-blur-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(20, 10, 10, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 16px;
+}
+
+.category-hot:hover .hot-blur-overlay {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  background-color: rgba(20, 10, 10, 0.3);
+}
+
+.hot-name {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 6px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+

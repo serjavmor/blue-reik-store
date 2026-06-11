@@ -55,12 +55,65 @@ function StoreContent({ products, onAddToCart }) {
             maxWidth: '650px',
             margin: '0 auto 24px auto'
           }}>
-            Esta es mi selección personal de ropa favorita: diseños atrevidos, novedosos y tan únicos que tus amigas van a querer copiarte el look (estás advertida). La mejor selección de moda de todo Chile elegida a mano por Blue Reik. Envío express gratuito hoy... porque esperar no es lo nuestro.
+            Esta es mi selección personal de ropa favorita: diseños atrevidos, novedosos y tan únicos que tus amigas van a querer copiarte el look (estás advertida). La mejor selección de moda de todo Chile elegida a mano por Blue Reik.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap', fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: '600' }}>
             <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>✓ Envío gratis a todo Chile (sin sorpresas al pagar)</span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>✓ Pago 100% seguro con Webpay</span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>✓ Devoluciones sin dramas</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección de Categorías en Carrusel Horizontal */}
+      <section className="categories-section">
+        <div className="container">
+          <h2 className="categories-title">Explorar Categorías</h2>
+          <div className="categories-container">
+            {/* Pantalones */}
+            <div className="category-card" style={{ position: 'relative' }}>
+              <img src="/images/aerofit_sportset.png" alt="Pantalones" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
+              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Pantalones</span>
+            </div>
+            
+            {/* Vestidos */}
+            <div className="category-card" style={{ position: 'relative' }}>
+              <img src="/images/satin_flow_dress.png" alt="Vestidos" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
+              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Vestidos</span>
+            </div>
+            
+            {/* Faldas */}
+            <div className="category-card" style={{ position: 'relative' }}>
+              <img src="/images/softcloud_sweater.png" alt="Faldas" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
+              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Faldas</span>
+            </div>
+            
+            {/* Calzado */}
+            <div className="category-card" style={{ position: 'relative' }}>
+              <img src="/images/aerofit_sportset.png" alt="Calzado" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
+              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Calzado</span>
+            </div>
+            
+            {/* Ropa Interior */}
+            <div className="category-card" style={{ position: 'relative' }}>
+              <img src="/images/aerofit_sportset.png" alt="Ropa Interior" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65))', zIndex: 2 }}></div>
+              <span className="category-name" style={{ position: 'relative', zIndex: 3, color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.8)', fontSize: '0.9rem', fontWeight: '800' }}>Ropa Interior</span>
+            </div>
+            
+            {/* Categoría Ropa Hot con efecto Blur */}
+            <div className="category-card category-hot" style={{ position: 'relative' }}>
+              <img src="/images/satin_flow_dress.png" alt="Ropa Hot" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div className="hot-blur-overlay" style={{ zIndex: 2 }}>
+                <span style={{ fontSize: '2rem' }}>🔥</span>
+                <span className="hot-name">Ropa Hot</span>
+                <span style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.4)', padding: '2px 6px', borderRadius: '10px', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Privado</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
