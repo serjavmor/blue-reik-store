@@ -57,11 +57,6 @@ function StoreContent({ products, onAddToCart }) {
           }}>
             Esta es mi selección personal de ropa favorita: diseños atrevidos, novedosos y tan únicos que tus amigas van a querer copiarte el look (estás advertida). La mejor selección de moda de todo Chile elegida a mano por Blue Reik.
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap', fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: '600' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>✓ Envío gratis a todo Chile (sin sorpresas al pagar)</span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>✓ Pago 100% seguro con Webpay</span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>✓ Devoluciones sin dramas</span>
-          </div>
         </div>
       </section>
 
